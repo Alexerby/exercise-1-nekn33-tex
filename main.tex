@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % PACKAGES
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+]{hyperref}
+\usepackage{parskip}
+\usepackage{graphicx}
+
+% Bibliography setup
+\usepackage[style=authoryear, backend=biber]{biblatex}
+\addbibresource{sources.bib}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % LAYOUT / STYLING
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{} 
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{1.0ex plus .2ex}
+
+\usepackage[left=1in, right=1in, top=0.8in, bottom=0.8in]{geometry}
+\numberwithin{equation}{section}
+
+\usepackage{mathptmx}  % Times-like font with math support
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % TITLE & AUTHORS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{Exercise 1:  \\ (Applied Microeconometrics)}}
+
+\author{
+    Alexander Eriksson Byström \and 
+    Erik Alm Ramberg \and 
+    Jacob Lindberg \and 
+    Nathalie Hånell
+}
+\date{February 2026}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % DOCUMENT START
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\newpage
+\input{questions/1.tex}
+\input{questions/2.tex}
+\input{questions/3.tex}
+\input{questions/4.tex}
+\input{questions/5.tex}
+\input{questions/6.tex}
+\input{questions/7.tex}
+\input{questions/8.tex}
+\input{questions/9.tex}
+\input{questions/10.tex}
+\input{questions/11.tex}
+
+\newpage
+\printbibliography
+
+\end{document}

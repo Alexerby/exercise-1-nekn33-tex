@@ -1,0 +1,205 @@
+\section{Descriptive Statistics}
+\subsection{Generating Variables}
+See STATA code.
+
+\subsection{Descriptive Statistics of New Variables}
+
+\begin{table}[htbp]
+\centering
+\caption{Project STAR: Student Characteristics and Joint $P$-values by Grade}
+\label{tab:combined_star}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Variable & Small & Regular & Regular+Aide & Joint $P$-value \\
+\midrule
+\multicolumn{5}{c}{\textbf{Panel A: Kindergarten}} \\
+Free Lunch                       & 0.468 & 0.480 & 0.495 & 0.246 \\
+White/Asian                      & 0.686 & 0.676 & 0.660 & 0.238 \\
+Age in 1985                      & 5.257 & 5.238 & 5.239 & 0.341 \\
+Average Score                    & 465.803 & 458.943 & 459.616 & 0.000 \\
+Class size                       & 15.396 & 22.375 & 23.257 & 0.000 \\
+\addlinespace
+\multicolumn{5}{c}{\textbf{Panel B: Grade 1}} \\
+Free Lunch                       & 0.438 & 0.468 & 0.440 & 0.220 \\
+White/Asian                      & 0.689 & 0.630 & 0.704 & 0.000 \\
+Age in 1985                      & 5.333 & 5.423 & 5.424 & 0.000 \\
+Average Score                    & 534.646 & 519.456 & 525.740 & 0.000 \\
+Class size                       & 15.690 & 22.689 & 23.420 & 0.000 \\
+\addlinespace
+\multicolumn{5}{c}{\textbf{Panel C: Grade 2}} \\
+Free Lunch                       & 0.411 & 0.428 & 0.406 & 0.587 \\
+White/Asian                      & 0.684 & 0.645 & 0.652 & 0.033 \\
+Age in 1985                      & 5.428 & 5.517 & 5.509 & 0.000 \\
+Average Score                    & 588.757 & 578.729 & 581.359 & 0.000 \\
+Class size                       & 15.310 & 23.464 & 23.469 & 0.000 \\
+\addlinespace
+\multicolumn{5}{c}{\textbf{Panel D: Grade 3}} \\
+Free Lunch                       & 0.383 & 0.391 & 0.405 & 0.614 \\
+White/Asian                      & 0.690 & 0.677 & 0.656 & 0.075 \\
+Age in 1985                      & 5.487 & 5.545 & 5.554 & 0.003 \\
+Average Score                    & 621.863 & 614.685 & 614.548 & 0.000 \\
+Class size                       & 15.714 & 23.610 & 24.435 & 0.000 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize \textit{Note:} Joint $P$-values refer to the $F$-test for equality of means across the three class types. Average score is the mean of reading and math scaled scores.
+\end{flushleft}
+\end{table}
+
+
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Panel: Grade k}
+\begin{tabular}{l*{1}{cc}}
+\toprule
+                    &\multicolumn{2}{c}{Small}\\
+                    &        mean&        pval\\
+\midrule
+1                   &            &            \\
+Free Lunch          &       0.468&            \\
+White/Asian         &       0.686&            \\
+Age in 1985         &       5.257&            \\
+Average Score (Kindergarten)&     465.803&            \\
+Class size (based on teacher id)&      15.396&            \\
+\midrule
+2                   &            &            \\
+Free Lunch          &       0.480&            \\
+White/Asian         &       0.676&            \\
+Age in 1985         &       5.238&            \\
+Average Score (Kindergarten)&     458.943&            \\
+Class size (based on teacher id)&      22.375&            \\
+\midrule
+3                   &            &            \\
+Free Lunch          &       0.495&            \\
+White/Asian         &       0.660&            \\
+Age in 1985         &       5.239&            \\
+Average Score (Kindergarten)&     459.616&            \\
+Class size (based on teacher id)&      23.257&            \\
+\midrule
+Total               &            &            \\
+Free Lunch          &       0.482&            \\
+White/Asian         &       0.673&            \\
+Age in 1985         &       5.244&            \\
+Average Score (Kindergarten)&     461.252&            \\
+Class size (based on teacher id)&      20.585&            \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Panel: Grade 1}
+\begin{tabular}{l*{1}{cc}}
+\toprule
+                    &\multicolumn{2}{c}{Small}\\
+                    &        mean&        pval\\
+\midrule
+1                   &            &            \\
+Free Lunch          &       0.438&            \\
+White/Asian         &       0.689&            \\
+Age in 1985         &       5.333&            \\
+Average Score (Grade 1)&     534.646&            \\
+Class size (based on teacher id)&      15.690&            \\
+\midrule
+2                   &            &            \\
+Free Lunch          &       0.468&            \\
+White/Asian         &       0.630&            \\
+Age in 1985         &       5.423&            \\
+Average Score (Grade 1)&     519.456&            \\
+Class size (based on teacher id)&      22.689&            \\
+\midrule
+3                   &            &            \\
+Free Lunch          &       0.440&            \\
+White/Asian         &       0.704&            \\
+Age in 1985         &       5.424&            \\
+Average Score (Grade 1)&     525.740&            \\
+Class size (based on teacher id)&      23.420&            \\
+\midrule
+Total               &            &            \\
+Free Lunch          &       0.449&            \\
+White/Asian         &       0.672&            \\
+Age in 1985         &       5.398&            \\
+Average Score (Grade 1)&     525.847&            \\
+Class size (based on teacher id)&      20.981&            \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Panel: Grade 2}
+\begin{tabular}{l*{1}{cc}}
+\toprule
+                    &\multicolumn{2}{c}{Small}\\
+                    &        mean&        pval\\
+\midrule
+1                   &            &            \\
+Free Lunch          &       0.411&            \\
+White/Asian         &       0.684&            \\
+Age in 1985         &       5.428&            \\
+Average Score (Grade 2)&     588.757&            \\
+Class size (based on teacher id)&      15.310&            \\
+\midrule
+2                   &            &            \\
+Free Lunch          &       0.428&            \\
+White/Asian         &       0.645&            \\
+Age in 1985         &       5.517&            \\
+Average Score (Grade 2)&     578.729&            \\
+Class size (based on teacher id)&      23.464&            \\
+\midrule
+3                   &            &            \\
+Free Lunch          &       0.406&            \\
+White/Asian         &       0.652&            \\
+Age in 1985         &       5.509&            \\
+Average Score (Grade 2)&     581.359&            \\
+Class size (based on teacher id)&      23.469&            \\
+\midrule
+Total               &            &            \\
+Free Lunch          &       0.414&            \\
+White/Asian         &       0.659&            \\
+Age in 1985         &       5.488&            \\
+Average Score (Grade 2)&     582.629&            \\
+Class size (based on teacher id)&      21.075&            \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Panel: Grade 3}
+\begin{tabular}{l*{1}{cc}}
+\toprule
+                    &\multicolumn{2}{c}{Small}\\
+                    &        mean&        pval\\
+\midrule
+1                   &            &            \\
+Free Lunch          &       0.383&            \\
+White/Asian         &       0.690&            \\
+Age in 1985         &       5.487&            \\
+Average Score (Grade 3)&     621.863&            \\
+Class size (based on teacher id)&      15.714&            \\
+\midrule
+2                   &            &            \\
+Free Lunch          &       0.391&            \\
+White/Asian         &       0.677&            \\
+Age in 1985         &       5.545&            \\
+Average Score (Grade 3)&     614.685&            \\
+Class size (based on teacher id)&      23.610&            \\
+\midrule
+3                   &            &            \\
+Free Lunch          &       0.405&            \\
+White/Asian         &       0.656&            \\
+Age in 1985         &       5.554&            \\
+Average Score (Grade 3)&     614.548&            \\
+Class size (based on teacher id)&      24.435&            \\
+\midrule
+Total               &            &            \\
+Free Lunch          &       0.393&            \\
+White/Asian         &       0.673&            \\
+Age in 1985         &       5.530&            \\
+Average Score (Grade 3)&     616.941&            \\
+Class size (based on teacher id)&      21.387&            \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
