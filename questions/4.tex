@@ -17,3 +17,68 @@ Because every teacher in this sample is in the control group, their ``experiment
 If the test score gap was caused only by psychological reactions to the experiment, class size should have no predictive power within this group. 
 However, Krueger finds a statistically significant relationship (t-statistic of -4.3), where even small reductions in class size among regular classes lead to higher scores. 
 This suggests that the class-size effect is a real pedagogical phenomenon rather than a byproduct of the experiment's design.
+
+\subsection{Replication Krueger Falsification Test}
+When \textcite{krueger1999} performed the test described in the previous subquestion, he found a coefficient of -.55 with a \( t \)-ratio of -4.3.
+In Table \ref{tab:hawthorne_check} we replicate the falsification test and find a similar outcome to Kruegers, in our case a coefficient of -.52 with a \( t \)-ratio of -4.5.
+
+The reason ours is not identical is due to some small deviation in the model specification or the dataset itself.
+
+
+\begin{table}[htbp]
+\centering
+\caption{Replication of Hawthorne/John Henry Sensitivity Check (Control Group Only)}
+\label{tab:hawthorne_check}
+\begin{tabular}{lcc}
+\hline\hline
+\textbf{Dependent Variable: Pooled Test Score} & \textbf{Coefficient} & \textbf{(Std. Error)} \\
+\hline
+Actual Class Size (\textit{csize}) & -0.515*** & (0.116) \\
+\\
+\textbf{Student Characteristics} & & \\
+White/Asian Dummy & 22.125*** & (1.212) \\
+Girl & 6.313*** & (0.621) \\
+\\
+\textbf{Teacher Characteristics} & & \\
+Teacher Experience (Years) & -0.006 & (0.040) \\
+Teacher Higher Degree Dummies & Included & -- \\
+\\
+\textbf{Fixed Effects} & & \\
+Grade Level Dummies & Included & -- \\
+School Fixed Effects & Included & -- \\
+\hline
+Observations & 12,540 & \\
+R-squared & 0.384 & \\
+\textit{t}-statistic on Class Size & -4.45 & \\
+\hline\hline
+\multicolumn{3}{l}{\small Robust standard errors in parentheses. *** p$<$0.01, ** p$<$0.05, * p$<$0.1} \\
+\end{tabular}
+\end{table}
+
+Next up, we perform the exact same test but using only the treatment group in contrast to only using the control group. 
+The results for this test is compared to the one we just performed in Table \ref{tab:comparison} and shows that the class size is no longer significant (\( t \)-stat -0.34).
+The main message here being that class size seems to be less important once the number of students is low enough. 
+It does not matter if the class has 13 or 14 students, but going from 23 to 24 students does matter for the test scores.
+
+\begin{table}[htbp]
+\centering
+\caption{Within-Group Sensitivity Analysis: Control vs. Treatment Arms}
+\label{tab:comparison}
+\begin{tabular}{lcc}
+\hline\hline
+ & \textbf{(1) Control Group} & \textbf{(2) Treatment Group} \\
+\textbf{Variables} & \textbf{Test Score} & \textbf{Test Score} \\
+\hline
+Actual Class Size (\textit{csize}) & -0.515*** & -0.110 \\
+ & (0.116) & (0.326) \\
+\\
+Student \& Teacher Controls & Yes & Yes \\
+Grade \& School Fixed Effects & Yes & Yes \\
+\hline
+Observations & 12,540 & [Check your Obs count] \\
+R-squared & 0.384 & [Check your R2] \\
+\textit{t}-statistic & -4.45 & -0.34 \\
+\hline\hline
+\multicolumn{3}{l}{\small Robust standard errors in parentheses. *** p$<$0.01, ** p$<$0.05, * p$<$0.1} \\
+\end{tabular}
+\end{table}
