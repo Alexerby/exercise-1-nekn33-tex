@@ -1,0 +1,104 @@
+\section{Regression Estimates}
+
+\subsection{Replicating Results}
+See STATA code attached and Table \ref{tab:krueger_long}.
+
+\begin{longtable}{l*{3}{c}}
+\caption{Replication of Krueger (1999) Table 5: OLS Results by Grade} \label{tab:krueger_long} \\
+\toprule
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{Basic}&\multicolumn{1}{c}{School FE}&\multicolumn{1}{c}{Full}\\
+\midrule
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{Basic}&\multicolumn{1}{c}{School FE}&\multicolumn{1}{c}{Full}\\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{4}{r}{{Continued on next page}} \\
+\endfoot
+
+\bottomrule
+\multicolumn{4}{l}{\footnotesize Robust standard errors in parentheses. *** p$<$0.01, ** p$<$0.05, * p$<$0.1}\\
+\endlastfoot
+
+% --- PANEL A: KINDERGARTEN ---
+\multicolumn{4}{l}{\textbf{Panel A: Kindergarten}} \\*
+Small Class         &       6.860\sym{***}&       7.263\sym{***}&       7.197\sym{***}\\
+                    &      (1.324)         &      (1.223)         &      (1.178)         \\
+Regular w/ Aide     &       0.673         &       0.700         &       0.839         \\
+                    &      (1.237)         &      (1.112)         &      (1.075)         \\
+White/Asian         &                     &                     &      13.266\sym{***}\\
+                    &                     &                     &      (1.945)         \\
+Free Lunch          &                     &                     &     -16.848\sym{***}\\
+                    &                     &                     &      (1.082)         \\
+Female              &                     &                     &       5.709\sym{***}\\
+                    &                     &                     &      (0.918)         \\
+\midrule
+
+% --- PANEL B: GRADE 1 ---
+\multicolumn{4}{l}{\textbf{Panel B: Grade 1}} \\*
+Small Class         &      15.189\sym{***}&      15.278\sym{***}&      14.137\sym{***}\\
+                    &      (1.523)         &      (1.377)         &      (1.337)         \\
+Regular w/ Aide     &       6.284\sym{***}&       4.391\sym{***}&       4.063\sym{***}\\
+                    &      (1.423)         &      (1.293)         &      (1.254)         \\
+White/Asian         &                     &                     &      15.702\sym{***}\\
+                    &                     &                     &      (1.969)         \\
+Free Lunch          &                     &                     &     -22.388\sym{***}\\
+                    &                     &                     &      (1.291)         \\
+Female              &                     &                     &       5.703\sym{***}\\
+                    &                     &                     &      (1.049)         \\
+\midrule
+
+% --- PANEL C: GRADE 2 ---
+\multicolumn{4}{l}{\textbf{Panel C: Grade 2}} \\*
+Small Class         &      10.028\sym{***}&      10.953\sym{***}&      10.144\sym{***}\\
+                    &      (1.476)         &      (1.384)         &      (1.342)         \\
+Regular w/ Aide     &       2.630         &       2.586\sym{*}  &       2.881\sym{*}  \\
+                    &      (1.371)         &      (1.266)         &      (1.230)         \\
+White/Asian         &                     &                     &      13.846\sym{***}\\
+                    &                     &                     &      (2.007)         \\
+Free Lunch          &                     &                     &     -21.771\sym{***}\\
+                    &                     &                     &      (1.275)         \\
+Female              &                     &                     &       5.144\sym{***}\\
+                    &                     &                     &      (1.023)         \\
+\midrule
+
+% --- PANEL D: GRADE 3 ---
+\multicolumn{4}{l}{\textbf{Panel D: Grade 3}} \\*
+Small Class         &       7.178\sym{***}&       7.094\sym{***}&       5.733\sym{***}\\
+                    &      (1.295)         &      (1.224)         &      (1.197)         \\
+Regular w/ Aide     &      -0.137         &      -0.048         &      -0.459         \\
+                    &      (1.221)         &      (1.152)         &      (1.123)         \\
+White/Asian         &                     &                     &      11.062\sym{***}\\
+                    &                     &                     &      (1.869)         \\
+Free Lunch          &                     &                     &     -16.425\sym{***}\\
+                    &                     &                     &      (1.127)         \\
+Female              &                     &                     &       4.436\sym{***}\\
+                    &                     &                     &      (0.919)         \\
+\midrule
+School Fixed Effects&          No         &         Yes         &         Yes         \\
+\end{longtable}
+
+\subsection{Interpretation of Coefficients}
+For the first specification we study the results for kindergarten, using no fixed effects for school. A small class has a larger impact on the results compared to regular class with aid. This is in line with the results from Kreuger (1999), although our coefficient numbers are slightly larger. For example, the children assigned to the small class perform 6.86 points higher than the regular class, while regular aid performs 0.67 points higher (in kindergarten). 
+
+\subsection{Interpretation of Coefficients When More Variables are Added}
+When adding more variables (girl, whiteasian and freelunch) and fixed effects of school into the regression, it is difficult to draw a general conclusion. 
+For kindergarten classes the effect becomes greater for the two sub-group classes (small and regular-aid) when more variables are added. 
+For grade one there is a small decrease in the explanatory power (minus 1 point) when comparing the full model to the base model. 
+In second grade there is a small increase, and in third grade there is a relatively large decrease. 
+If there are large differences in the results, this might indicate that randomization might not work. 
+When we add more variables, and the coefficient changes, this indicates that these variables are related to each other, and are not independently randomized. 
+If the estimates change it might imply that there is an omitted variable bias.
+
+\subsection{Standard Errors as More Variables are Added}
+As more variables are added to the model the standard errors for both the small class and the regular aid glass decreases. 
+This is expected, if the variables added increase the explanatory power of the model, which seems to be the case in this model. 
+If the standard errors instead increased, there is a risk of multicollinearity. This means that the new variables are correlated to the variable of interest. 
+

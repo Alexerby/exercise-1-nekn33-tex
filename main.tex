@@ -10,9 +10,10 @@
 \setlength{\voffset}{-0.5in}
 
 
-\usepackage[utf8]{inputenc}
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pdflscape}
+\usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{amsmath, amssymb}
@@ -35,9 +36,9 @@
 % % LAYOUT / STYLING
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titlesec}
-\titleformat{\section}{\large\bfseries}{\thesection}{1em}{} 
+% \titleformat{\section}{\large\bfseries}{\thesection}{1em}{} 
 \titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{1.0ex plus .2ex}
-\renewcommand{\thesubsection}{\thesection.\Alph{subsection}} % 1.A, 1.B...
+\renewcommand{\thesubsection}{\thesection\Alph{subsection}} % 1A, 1B...
 
 \numberwithin{equation}{section}
 
@@ -55,6 +56,8 @@
     Nathalie Hånell
 }
 \date{}
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % DOCUMENT START

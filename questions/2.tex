@@ -1,6 +1,41 @@
 \section{Random Assignment}
-\subsection{Treatment Randomly Assigned to Students and Teachers?}
+\subsection{Within-School Randomization and Selection Bias}
 
 Balance holding across grades should imply randomness; if we fail to reject the null, there is no statistical difference between the beta coefficients. This suggests that the differences in outcome variables (e.g., school lunch, race, and age) are random—meaning they are independent of class-size assignment. 
 
 However, this statistical insignificance does not prove randomness; it only indicates that we cannot reject the possibility of it. True randomness is derived from the experimental design itself, not merely from the statistical results. While these results provide increased confidence in the study's integrity, they come with caveats: based on the F-test results, we cannot reject the null, meaning randomness is possible, but this conclusion remains a statistical inference rather than an absolute certainty.
+
+\subsection{Balance of Covariates Across Class Types}
+\begin{table}[htbp]
+    \centering
+    \caption{Joint F-tests for Randomization Conditional on School Fixed Effects}
+    \label{tab:randomization_results}
+    \begin{tabular}{lcccc}
+        \toprule
+        Variable & Kindergarten & Grade 1 & Grade 2 & Grade 3 \\
+        \midrule
+        Free Lunch & 0.323 & 4.099 & 3.455 & 4.175 \\
+                   & (0.724) & (0.017) & (0.032) & (0.015) \\
+        \addlinespace
+        White/Asian & 1.028 & 0.246 & 0.242 & 0.062 \\
+                    & (0.358) & (0.782) & (0.785) & (0.940) \\
+        \addlinespace
+        Age in 1985 & 0.398 & 15.131 & 13.243 & 8.219 \\
+                    & (0.671) & (0.000) & (0.000) & (0.000) \\
+        \bottomrule
+        \multicolumn{5}{l}{\footnotesize \textit{Note:} P-values are reported in parentheses. All models include school fixed effects.} \\
+    \end{tabular}
+\end{table}
+
+\subsection{Interpretation of Results}
+The joint F-tests can be found in Table \ref{tab:randomization_results}. 
+For the Kindergarten cohort, all p-values are statistically insignificant (ranging from 0.358 to 0.724), meaning we fail to reject the null hypothesis of covariate balance. 
+This suggests that the initial random assignment was successful.
+
+However, as the cohort progressed, evidence of systematic sorting emerged. The null hypothesis for \texttt{Free Lunch} is rejected at the 5\% level for Grades 1, 2, and 3. 
+Most strikingly, \texttt{Age in 1985} is strongly rejected for Grades 1 through 3 ($p < 0.001$). 
+
+This pattern indicates that the randomization degraded over time.
+One of the reasons for this could be due to non-random attrition or the non-random assignment of new students who entered the study after Kindergarten.
+In conclusion, these results tells us that it's probably necessary to include some baseline controls in the final regression analysis to account for this observed selection bias.
+
