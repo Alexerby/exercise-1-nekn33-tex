@@ -3,6 +3,14 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % PACKAGES
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage[margin=1in]{geometry}
+\setlength{\voffset}{-0.5in}
+
+
+\usepackage[utf8]{inputenc}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{booktabs}
@@ -29,8 +37,8 @@
 \usepackage{titlesec}
 \titleformat{\section}{\large\bfseries}{\thesection}{1em}{} 
 \titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{1.0ex plus .2ex}
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}} % 1.A, 1.B...
 
-\usepackage[left=1in, right=1in, top=0.8in, bottom=0.8in]{geometry}
 \numberwithin{equation}{section}
 
 \usepackage{mathptmx}  % Times-like font with math support
@@ -38,7 +46,7 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % TITLE & AUTHORS
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{\textbf{Exercise 1:  \\ (Applied Microeconometrics)}}
+\title{\textbf{Exercise 1: Experiments  \\ (Applied Microeconometrics)}}
 
 \author{
     Alexander Eriksson Byström \and 
@@ -46,7 +54,7 @@
     Jacob Lindberg \and 
     Nathalie Hånell
 }
-\date{February 2026}
+\date{}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % DOCUMENT START
@@ -55,7 +63,6 @@
 
 \maketitle
 
-\newpage
 \input{questions/1.tex}
 \input{questions/2.tex}
 \input{questions/3.tex}
